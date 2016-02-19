@@ -1,4 +1,4 @@
-# School-R-Work
+# School-Stats-Work
 This repository contains some of the work I have done in my Statistics courses at the University of Toronto St. George: <br />
 <br />
 STA248H1 - Statistics for Computer Scientists<br />
