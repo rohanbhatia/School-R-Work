@@ -49,17 +49,17 @@ print(ppois(99, lambda=l))
 }
 
 #main
-print('Chapter 4 Question 47')
-m=0
-s=1
-print(paste0("Mean: ", m))
-print(paste0("Standard Deviation: ", s))
-ch4_q47(m, s, 1)
-ch4_q47(m, s, 2)
-ch4_q47(m, s, 3)
-print("")
-print("Chapter 4 Question 52")
-ch4_q52()
-print("")
-print("Chapter 4 Question 57")
-ch4_q57()
+#print('Chapter 4 Question 47')
+#m=0
+#s=1
+#print(paste0("Mean: ", m))
+#print(paste0("Standard Deviation: ", s))
+#ch4_q47(m, s, 1)
+#ch4_q47(m, s, 2)
+#ch4_q47(m, s, 3)
+#print("")
+#print("Chapter 4 Question 52")
+#ch4_q52()
+#print("")
+#print("Chapter 4 Question 57")
+#ch4_q57()

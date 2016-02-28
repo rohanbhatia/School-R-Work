@@ -185,7 +185,7 @@ ch6_q33 <- function() {
 
 
 #MAIN
-ch6_q33()
+#ch6_q33()
 
 
 
