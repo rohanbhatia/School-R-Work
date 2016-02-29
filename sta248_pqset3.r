@@ -41,7 +41,6 @@ ch7q29 <-function() {
 	print(u)
 	print(v)
 
-
 } 
 
 
