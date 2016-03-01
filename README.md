@@ -6,3 +6,4 @@ For this course, some of the scripts answer questions in "Introduction to Probab
 sta248_pqset1.r - An R script answering the questions assigned in Practice Question Set 1 for this course<br />
 sta248_pqset2.r - An R script answering the questions assigned in Practice Question Set 2 for this course<br />
 sta248_pqset3.r - An R script answering the questions assigned in Practice Question Set 3 for this course<br />
+sta248_pqset3.r - An R script answering the questions assigned in Practice Question Set 4 for this course<br />
