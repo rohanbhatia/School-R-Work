@@ -187,8 +187,27 @@ print(n1)
 
 }
 
+ch9q3 <- function() {
 
-ch9q1()
+print("Part A")
+n=1000
+pbar1 = 600/1000
+calc2 = (pbar1 * (1 - pbar1))/n
+calc3 = sqrt(calc2)
+zmultiplier = qnorm(0.95, mean = 0, sd = 1)
+l = calc3*zmultiplier
+print(l)
+
+print("Part B")
+pbar1 = 900/1000
+calc2 = (pbar1 * (1 - pbar1))/n
+calc3 = sqrt(calc2)
+zmultiplier = qnorm(0.975, mean = 0, sd = 1)
+l = calc3*zmultiplier
+print(l)
+
+}
+
 
 
 
