@@ -163,13 +163,32 @@ print(l)
 print("Part D")
 print("Lower the confidence level")
 
+}
 
+ch9q1 <- function() {
 
+print("Part A")
+n = 50
+k = 45
+pbar = k/n
+print(pbar)
+
+print("Part B")
+calc2 = (pbar * (1 - pbar))/n
+calc3 = sqrt(calc2)
+zmultiplier = qnorm(0.95, mean = 0, sd = 1)
+l = calc3*zmultiplier
+print(l)
+
+print("Part C")
+d = 0.02
+n1 = ((zmultiplier/d)^2) * (pbar) * (1 - pbar)
+print(n1)
 
 }
 
 
-ch8q15()
+ch9q1()
 
 
 
