@@ -120,35 +120,31 @@ print(sqrt(svar))
 print("Part C")
 range = max(x) - min(x)
 print(range/4)
-	
+
 }
 
 ch6_q27 <- function() {
 
-	print("Chapter 6 Question 27")
-	print("Let X be normally distributed with mean 0 and variance 1")
+print("Part A")
+q3 = qnorm(0.75, mean=0, sd=1)
+q1 = qnorm(0.25, mean=0, sd=1)
+print(paste0("q3: ", q3, "    q1: ", q1))
 
-	print("(a) Verify that q3 = 0 + 0.67(1), q1 = 0 - 0.67(1)")
-	q3 = qnorm(0.75, mean=0, sd=1)
-	q1 = qnorm(0.25, mean=0, sd=1)
-	print(paste0("q3: ", q3, "    q1: ", q1))
+print("Part B")
+iqr = q3 - q1
+print(iqr)
 
-	print("(b) Find the interquartile range for X")
-	iqr = q3 - q1
-	print(iqr)
+print("Part C")
+f1 = q1 - 1.5*iqr
+f3 = q3 + 1.5*iqr
+print(paste0("f1: ", f1, "    f3: ", f3))
 
-	print("(c) Verify that the inner fences for X are f1 = 0 - 2.68(1) and f3 = 0 + 2.68(1)")
-	f1 = q1 - 1.5*iqr
-	f3 = q3 + 1.5*iqr
-	print(paste0("f1: ", f1, "    f3: ", f3))
+print("Part D")
+a = pnorm(f1, mean=0, sd=1)
+b = pnorm(f3, mean=0, sd=1)
+p = 1 - b + a
+print(p)
 
-	print("(d) Verify that the probability that X will fall beyond the inner fences is approx 0.007")
-	a = pnorm(f1, mean=0, sd=1)
-	b = pnorm(f3, mean=0, sd=1)
-	p = 1 - b + a
-	print(p)
-
-	print("")
 }
 
 ch6_q33 <- function() {
@@ -179,10 +175,6 @@ ch6_q33 <- function() {
 	print("")
 }
 
-
-
-#MAIN
-#ch6_q33()
 
 
 
