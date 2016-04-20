@@ -12,24 +12,46 @@ print(a-b)
 
 ch4_q52 <- function() {
 
-n=20
-p=0.30
 
-print("A: P[X <= 3]")
-a = pbinom(3, size=n, prob=p)
-print(a)
+	n = 20
+	p = 0.30
+	s = sqrt(n*p*(1-p))
 
-print("B: P[3 <= X <= 6")
-b = pbinom(6, size=n, prob=p) - a
-print(b)
+	print("Part A: P[X <= 3]")
+	a = pnorm(3, mean=n*p, sd=s)
+	b = 0.1071
+	c = pbinom(3, size=n, prob=p)
+	print(a)
+	print(b)
+	print(c)
+	print("")
 
-print("C: P[4 <= X]")
-c = pbinom(20, size=n, prob=p) - pbinom(4, size=n, prob=p)
-print(c)
+	print("Part B: P[3 <= X <= 6]")
+	d = pnorm(6, mean=n*p, sd=s)
+	e = d - a
+	f = 0.6080 - b
+	g = pbinom(6, size=n, prob=p) - c
+	print(e)
+	print(f)
+	print(g)
+	print("")
 
-print("D: P[4 = X]")
-d = dbinom(4, size=n, prob=p)
-print(d)
+	print("Part C: P[4 <= X]")
+	h = pnorm(20, mean=n*p, sd=s) - pnorm(4, mean=n*p, sd=s)
+	i = 1 - 0.2375
+	j = pbinom(20, size=n, prob=p) - pbinom(4, size=n, prob=p)
+	print(h)
+	print(i)
+	print(j)
+	print("")
+
+	print("Part D: P[4 = X]")
+	k = dnorm(4, mean=n*p, sd=s)
+	l = 0.2375 - 0.1071
+	m = dbinom(4, size=n, prob=p)
+	print(k)
+	print(l)
+	print(m)
 
 }
 
@@ -48,18 +70,4 @@ print(ppois(99, lambda=l))
 
 }
 
-#main
-#print('Chapter 4 Question 47')
-#m=0
-#s=1
-#print(paste0("Mean: ", m))
-#print(paste0("Standard Deviation: ", s))
-#ch4_q47(m, s, 1)
-#ch4_q47(m, s, 2)
-#ch4_q47(m, s, 3)
-#print("")
-#print("Chapter 4 Question 52")
-#ch4_q52()
-#print("")
-#print("Chapter 4 Question 57")
-#ch4_q57()
+
