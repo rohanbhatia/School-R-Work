@@ -14,28 +14,24 @@ print(var)
 
 ch7q27 <- function() {
 
-	print("Question 27")
-	print("A: Plot data in stem and leaf diagram. Reasonable to assume data is normally distrbuted? Explain")
-	x = c(319, 338, 337, 339, 328, 325, 340, 331, 341, 336, 330, 330, 321, 327, 337, 320, 343, 350, 322, 334, 326, 349, 341, 338, 332, 339, 335, 338, 333, 334)
-	stem(x)
-	print("Yes, as the shape of the stem and leaf diagram suggests this")
-	print("")
-	print("B: Estimate mean, variance using MoM estimators")
-	print("m1, sample mean")
-	m1 = sum(x) / length(x)
-	print(m1)
-	print("m2")
-	x2 = x*x
-	m2  = sum(x2)/30
-	print(m2)
-	print("var is m2 - m1^2. variance estimate:")
-	var = m2 - m1*m1
-	print(var)
-	print("C: Find an unbiased estimate for variance ")
-	print("use sample variance")
-	x3 = (x - m1)^2
-	s2 = sum(x3)/(length(x) - 1)
-	print(s2)
+x = c(319, 338, 337, 339, 328, 325, 340, 331, 341, 336, 330, 330, 321, 327, 337, 320, 343, 350, 322, 334, 326, 349, 341, 338, 332, 339, 335, 338, 333, 334)
+
+print("Part A")
+stem(x)
+print("Yes, based on shape of stem and leaf plot")
+
+print("Part B")
+m1 = sum(x)/length(x)
+m2 = sum(x^2)/length(x)
+mean = m1
+var = m2 - m1^2
+print(mean)
+print(var)
+
+print("Part C")
+s2 = sum((x - m1)^2)/length(x)
+print(s2)
+
 } 
 
 ch7q29 <-function() {
