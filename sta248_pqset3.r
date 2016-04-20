@@ -1,5 +1,16 @@
 #Chapter 7 q1, 5, 9, 17, 27, 29, 31, 35
 
+ch7q1 <- function() {
+
+mean = 8
+var = 5/20
+
+print("Mean")
+print(mean)
+print("Variance")
+print(var)
+
+}
 
 ch7q27 <- function() {
 
