@@ -2,33 +2,33 @@
 
 ch6_q7 <- function() {
 
-	print("Chapter 6 Question 7")
-	max=75.1
-	min=16.3
-	n_cat=7
+n = 70
+max = 75.1
+min = 16.3
 
-	print("A: These data are covered by an interval of what length?")
-	range=max-min
-	print(range)
 
-	print("B: Using the method outlined in this section, each category will be of what length?")
-	cat_length = range/n_cat+0.1
-	print(cat_length)
+print("Part A")
+range= max - min
+print(range)
 
-	print("C: What is the lower boundary for the first category?")
-	lower_boundary=min-0.05
-	print(lower_boundary)
+print("Part B")
+catlength = (range / 7) + 0.1
+print(catlength)
 
-	print("D: What are the boundaries for each of the seven categories?")
-	count = 1
-	boundary = lower_boundary
-	while (count < 8) {
-		print(paste0("Category: ", count))
-		print(paste0("Lower Boundary: ", boundary))
-		boundary = boundary + cat_length
-		print(paste0("Upper Boundary: ", boundary))
-		count = count + 1
-	}
+print("Part C")
+b1 = min - 0.05
+print(b1)
+
+print("Part D")
+print(b1 + 0*catlength)
+print(b1 + 1*catlength)
+print(b1 + 2*catlength)
+print(b1 + 3*catlength)
+print(b1 + 4*catlength)
+print(b1 + 5*catlength)
+print(b1 + 6*catlength)
+print(b1 + 7*catlength)
+
 }
 
 ch6_q9 <- function() {
