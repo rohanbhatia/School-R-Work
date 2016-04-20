@@ -107,24 +107,20 @@ print("mean, median, sd - time in minutes. var - no unit")
 
 ch6_q25 <- function() {
 
-	print("Chapter 6 Question 25")
-	x = c(6.2, 5.8, 4.6, 4.9, 7.1, 5.2, 8.1, 0.2, 3.4, 4.5, 8.0, 7.9, 6.1, 5.6, 5.5, 3.1, 6.8, 4.6, 3.8, 2.6, 4.5, 4.6, 7.7, 3.8, 4.1, 6.1, 4.1, 4.4, 5.2, 1.5)
+x = c(6.2, 5.8, 4.6, 4.9, 7.1, 5.2, 8.1, 0.2, 3.4, 4.5, 8.0, 7.9, 6.1, 5.6, 5.5, 3.1, 6.8, 4.6, 3.8, 2.6, 4.5, 4.6, 7.7, 3.8, 4.1, 6.1, 4.1, 4.4, 5.2, 1.5)
 
-	print("(a) Construct a stem and leaf diagram for these data. Is the assumption justified that X is normally distributed?")
-	stem(x)
-	print("Yes")
+print("Part A")
+stem(x)
+print("Yes, based on the shape of the distribution")
 
-	print("(b) Approximate pop sd via the sample sd s")
-	s = sqrt(var(x))
-	print(paste0("Sample sd: ", s))
+print("Part B")
+svar = sum((x-mean(x))^2)/(length(x) - 1)
+print(sqrt(svar))
 
-	print("(c) Find the sample range for these data, and use it to approximate pop sd. Compare your result to that obtained in (b)")
-	range = max(x) - min(x)
-	estimate = range/4
-	print(paste0("Estimated sd using range: ", estimate))
-	print("This is not far off the sample sd obtained in (b)")
-
-	print("")	
+print("Part C")
+range = max(x) - min(x)
+print(range/4)
+	
 }
 
 ch6_q27 <- function() {
