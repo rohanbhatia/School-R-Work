@@ -57,16 +57,18 @@ ch4_q52 <- function() {
 
 ch4_q57 <- function() {
 
-l = (1*60*60)/40
+l1 = (1/40)*60*60
+l2 = sqrt(l1)
 
-print("Average number of planes arriving or departing at O'Hare")
-print("1 every 40 seconds or 1/40 per second")
-print("Average number of planes per hour (3600*per second rate)")
-print(l)
-print("Probability of 75 or more flights in a random hour")
-print(ppois(74, lambda=l, lower=FALSE))
-print("Probability of less than 100 flights in a random hour")
-print(ppois(99, lambda=l))
+print("Part A")
+a = 1 - pnorm(74, mean=l1, sd=l2)
+print(a)
+print(ppois(74, lambda=l1, lower=FALSE))
+
+print("Part B")
+b = pnorm(99, mean=l1, sd=l2)
+print(b)
+print(ppois(99, lambda=l1))
 
 }
 
