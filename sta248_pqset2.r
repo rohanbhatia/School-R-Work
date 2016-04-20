@@ -32,15 +32,14 @@ print(b1 + 7*catlength)
 }
 
 ch6_q9 <- function() {
+	
+x  = c(0.2, 0.5, 0.7, 1.1, 1.2, 1.2, 1.3, 1.4, 1.4, 1.4, 1.5, 1.5, 1.6, 1.6, 1.7, 1.9, 2.0, 2.1, 2.1, 2.2, 2.3, 2.5, 2.6, 2.9, 2.8, 3.0, 3.1, 3.0, 3.7, 3.7, 4.0, 4.1, 4.5, 5.1, 5.8, 1.4)
 
-	print("Chapter 6 Question 9")
-	print("A: Create a stem and leaf plot for the given data")
-	x  = c(0.2, 0.5, 0.7, 1.1, 1.2, 1.2, 1.3, 1.4, 1.4, 1.4, 1.5, 1.5, 1.6, 1.6, 1.7, 1.9, 2.0, 2.1, 2.1, 2.2, 2.3, 2.5, 2.6, 2.9, 2.8, 3.0, 3.1, 3.0, 3.7, 3.7, 4.0, 4.1, 4.5, 5.1, 5.8, 1.4)
-	stem(x)
+print("Part A")
+stem(x)
 
-	print("B: Does the data suggest that the distribution of X is skewed? If so, give the direction of the skew")
-	print("Yes. The stem and leaf plot suggests the data is skewed right")
-	print("")
+print("Part B")
+print("Yes, skew right")
 
 
 }
