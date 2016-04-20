@@ -88,23 +88,21 @@ print("Yes - group 2 has much higher variance")
 
 ch6_q23 <- function() {
 
-	print("Chapter 6 Question 23")
-	print("Consider the data of Exercise 9")
-	x  = c(0.2, 0.5, 0.7, 1.1, 1.2, 1.2, 1.3, 1.4, 1.4, 1.4, 1.5, 1.5, 1.6, 1.6, 1.7, 1.9, 2.0, 2.1, 2.1, 2.2, 2.3, 2.5, 2.6, 2.9, 2.8, 3.0, 3.1, 3.0, 3.7, 3.7, 4.0, 4.1, 4.5, 5.1, 5.8, 1.4)
+x  = c(0.2, 0.5, 0.7, 1.1, 1.2, 1.2, 1.3, 1.4, 1.4, 1.4, 1.5, 1.5, 1.6, 1.6, 1.7, 1.9, 2.0, 2.1, 2.1, 2.2, 2.3, 2.5, 2.6, 2.9, 2.8, 3.0, 3.1, 3.0, 3.7, 3.7, 4.0, 4.1, 4.5, 5.1, 5.8, 1.4)
 
-	print("(a) Find the mean and median for that data")
-	mean = mean(x)
-	median = median(x)
-	print(paste0("Mean: ", mean, " Median: ", median))
+print("Part A")
+print("Mean, then median")
+print(mean(x))
+print(median(x))
 
-	print("(b) Find the standard deviation and variance for these data")
-	variance = var(x)
-	sd = sqrt(variance)
-	print(paste0("Standard deviation: ", sd, " Variance: ", variance))
+print("Part B")
+print("Sd, then Var")
+print(sd(x))
+print(var(x))
 
-	print("(c) What physical measurement unit is associated with each of the statistics in parts (a) and (b)?")
-	print("Mean, median, sd are in minutes, Variance is unitless")
-	print("")
+print("Part C")
+print("mean, median, sd - time in minutes. var - no unit")
+
 }
 
 ch6_q25 <- function() {
