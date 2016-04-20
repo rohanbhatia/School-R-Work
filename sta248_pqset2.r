@@ -32,7 +32,7 @@ print(b1 + 7*catlength)
 }
 
 ch6_q9 <- function() {
-	
+
 x  = c(0.2, 0.5, 0.7, 1.1, 1.2, 1.2, 1.3, 1.4, 1.4, 1.4, 1.5, 1.5, 1.6, 1.6, 1.7, 1.9, 2.0, 2.1, 2.1, 2.2, 2.3, 2.5, 2.6, 2.9, 2.8, 3.0, 3.1, 3.0, 3.7, 3.7, 4.0, 4.1, 4.5, 5.1, 5.8, 1.4)
 
 print("Part A")
@@ -46,39 +46,43 @@ print("Yes, skew right")
 
 ch6_q17 <- function() {
 
-	print("Chapter 6 Question 17")
-	print("Consider these datasets:")
-	one = c(1, 3, 2, 2, 5, 4, 4, 3, 3)
-	two = c(1, 2, 4, 1, 2, 5, 2, 5, 1, 5, 5, 3)
-	print(one)
-	print(two)
-	print("")
-	
-	print("A: Find the sample mean and sample median for each data set")
-	mean_one = mean(one)
-	median_one = median(one)
-	mean_two = mean(two)
-	median_two = median(two)
-	print(paste0("Dataset 1 mean: ", mean_one, " median: ", median_one))
-	print(paste0("Dataset 2 mean: ", mean_two, " median: ", median_two))
-	
-	print("B: Find the sample range for each data set")
-	range_one = max(one) - min(one)
-	range_two = max(two) - min(two)
-	print(paste0("Dataset1: ", range_one))
-	print(paste0("Dataset2: ", range_two))
-	
-	print("C: Find the sample variance and sample standard deviation for each dataset")
-	var_one = var(one)
-	sd_one = sqrt(var_one)
-	var_two = var(two)
-	sd_two = sqrt(var_two)
-	print(paste0("Dataset1 var: ", var_one, " sd: ", sd_one))
-	print(paste0("Dataset2 var: ", var_two, " sd: ", sd_two))
-	
-	print("D: Would you be surprised to hear someone claim these datasets were drawn from the same population?")
-	print("My answer: no, book answer: yes")
-	print("")
+one = c(1, 3, 2, 2, 5, 4, 4, 3, 3)
+two = c(1, 2, 4, 1, 2, 5, 2, 5, 1, 5, 5, 3)
+
+print("Part A")
+xbar1 = mean(one)
+xbar2 = mean(two)
+med1 = median(one)
+med2 = median(two)
+print("Set 1: Sample mean, sample median")
+print(xbar1)
+print(med1)
+print("Set 2: Sample mean, sample median")
+print(xbar2)
+print(med2)
+
+print("Part B")
+range1 = 5-1
+range2 = 5-1
+print("Set 1: sample range")
+print(range1)
+print("Set 2: sample range")
+print(range2)
+
+print("Part C")
+svar1 = sum((one-xbar1)^2)/(length(one) - 1)
+ssd1 = sqrt(svar1)
+svar2 = sum((two-xbar2)^2)/(length(two) - 1)
+ssd2 = sqrt(svar2)
+print("Set 1: sVar, sSD")
+print(svar1)
+print(ssd1)
+print("Set 2: sVar, sSD")
+print(svar2)
+print(ssd2)
+
+print("Part D")
+print("Yes - group 2 has much higher variance")
 
 }
 
