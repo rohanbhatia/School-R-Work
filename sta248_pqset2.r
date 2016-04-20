@@ -148,31 +148,31 @@ print(p)
 }
 
 ch6_q33 <- function() {
-	print("Chapter 6 Question 33")
 
-	x = c(15, 16, 17, 18, 17, 20, 16, 17, 18, 20, 18, 18, 19, 19, 17, 21, 17, 19, 18, 17, 22)
+x = c(15, 16, 17, 18, 17, 20, 16, 17, 18, 20, 18, 18, 19, 19, 17, 21, 17, 19, 18, 17, 22)
 
-	print("(a)")
-	stem(x, scale=2)
-	print("Yes")
+print("Part A")
+stem(x, scale=2)
+print("Yes")
 
-	k = fivenum(x)
-	print("(b)")
-	mean = mean(x)
-	median = k[3]
-	print(paste0("mean: ", mean, " median: ", median))
+k = fivenum(x)
+print("Part B")
+mean = mean(x)
+median = k[3]
+print(paste0("mean: ", mean, " median: ", median))
 
-	print("(c)")
-	var = var(x)
-	sd = sqrt(var)
-	print(paste0("sd: ", sd, " var: ", var))
+print("Part C")
+svar = sum((x-mean)^2)/(length(x) - 1)
+sd = sqrt(svar)
+print(paste0("sd: ", sd, " var: ", svar))
 
-	print("(d)")
-	q1 = k[2]
-	q3 = k[4]
-	iqr = q3-q1
-	print(paste0("Q1: ", q1, " Q3: ", q3, " IQR: ", iqr))
-	print("")
+print("Part D")
+q1 = k[2]
+q3 = k[4]
+iqr = q3-q1
+print(paste0("Q1: ", q1, " Q3: ", q3, " IQR: ", iqr))
+print("")
+
 }
 
 
