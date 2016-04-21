@@ -121,6 +121,19 @@ print("Lower the confidence level")
 
 }
 
+ch8q17 <- function() {
+
+x = c(25, 29, 32, 37, 40, 27, 30, 35, 38, 41, 42, 45, 45, 47, 49, 50, 55, 53, 60)
+n = length(x)
+xbar = mean(x)
+s2 = sum((x - xbar)^2)/(n - 1)
+s = sqrt(s2)
+t_alpha = 1.729
+l = t_alpha * s * (1/(sqrt(n)))
+print(xbar-l)
+
+}
+
 ch9q1 <- function() {
 
 print("Part A")
