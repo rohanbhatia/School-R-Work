@@ -98,22 +98,22 @@ x = c(290, 610, 790, 670, 770, 420, 600, 350, 800, 920, 410, 810, 620, 560, 550,
 
 print("Part A")
 stem(x)
-print("Yes, normality assumption appears to be met based on shape of stem and leaf plot")
+print("Yes, based on the shape of the stem/leaf plot")
 
 print("Part B")
 boxplot(x)
 print("No: Q1 is 480, Q3 is 720, IQR is 240, 1.5*IQR is 360, f1 is 120, f3 is 1080. No vals above 1080 or below 120")
 
+
 print("Part C")
-#sample mean
 n = length(x)
-xbar = sum(x) / n
-#sample variance calculation
-s = sd(x)
-df = n-1
-t = qt(0.995, df)
-l = t*(s/sqrt(n))
-print("L1, L2 are xbar +- :")
+xbar = mean(x)
+s2 = sum((x - xbar)^2)/(n - 1)
+s = sqrt(s2)
+t_alpha_div_2 = 2.756
+l = t_alpha_div_2 * s * (1/(sqrt(n)))
+print(xbar)
+print("+-")
 print(l)
 
 print("Part D")
