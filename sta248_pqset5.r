@@ -71,27 +71,24 @@ ch8q13 <- function() {
 x = c(2.0, 1.4, 3.5, 2.3, 3.2, 3.6, 0.1, 3.5, 2.2, 2.1, 2.4, 1.5, 2.2, 2.3, 2.7, 1.9, 1.7, 1.8, 3.1, 1.5, 1.5, 2.6, 2.8, 2.5, 2.5, 3.9, 0.8, 1.8, 3.3, 3.7)
 
 print("Part A")
-#sample mean
-print("Sample Mean")
 n = length(x)
-xbar = sum(x) / n
+xbar = mean(x)
+s2 = sum((x - xbar)^2)/(n - 1)
+s = sqrt(s2)
 print(xbar)
-#sample variance calculation
-print("Sample Variance")
-diff = (x - xbar)*(x-xbar)
-s2 = 0.89#sum(diff) / (n-1)
-print(s2)
-
+print(s)
 
 print("Part B")
-df = n-1
-t = qt(0.995, df)
-l = t*(s2/sqrt(n))
-print("L1, L2 are xbar +- :")
+t_alpha_div_2 = 2.756
+l = t_alpha_div_2 * s * (1/(sqrt(n)))
+print(xbar)
+print("+-")
 print(l)
 
 print("Part C")
-print("yes - we are 99% confident that x is within 2.35 +- 0.45. 6.6 is out of this range")
+print("We are 99% confident that the new mean is at most 2.8, so yes new algo is more efficient")
+
+
 
 }
 
