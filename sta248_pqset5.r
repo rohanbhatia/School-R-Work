@@ -139,20 +139,20 @@ ch9q1 <- function() {
 print("Part A")
 n = 50
 k = 45
-pbar = k/n
-print(pbar)
+p_o = k/n
+print(p_o)
 
 print("Part B")
-calc2 = (pbar * (1 - pbar))/n
-calc3 = sqrt(calc2)
-zmultiplier = qnorm(0.95, mean = 0, sd = 1)
-l = calc3*zmultiplier
+z_alpha_div_2 = 1.645
+l = (z_alpha_div_2) * (sqrt((p_o)*(1-p_o)*(1/n)))
+print(p_o)
+print("+-")
 print(l)
 
 print("Part C")
 d = 0.02
-n1 = ((zmultiplier/d)^2) * (pbar) * (1 - pbar)
-print(n1)
+n_0 = (z_alpha_div_2^2)*(1/(d^2))*(p_o)*(1-p_o)
+print(n_0)
 
 }
 
