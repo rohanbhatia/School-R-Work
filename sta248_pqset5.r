@@ -179,6 +179,16 @@ print(l2)
 
 }
 
+ch9q5 <- function() {
+
+p_0 = 1/2
+z_alpha_div_2 = 1.96
+d = 0.03
+n = (z_alpha_div_2^2) * (1/(d^2)) * (1/2) * (1/2)
+print(n)
+
+}
+
 
 
 
