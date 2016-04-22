@@ -159,21 +159,23 @@ print(n_0)
 ch9q3 <- function() {
 
 print("Part A")
-n=1000
-pbar1 = 600/1000
-calc2 = (pbar1 * (1 - pbar1))/n
-calc3 = sqrt(calc2)
-zmultiplier = qnorm(0.95, mean = 0, sd = 1)
-l = calc3*zmultiplier
-print(l)
+n = 1000
+k1 = 600
+p_1 = k1/n
+z_alpha_div_2 = 1.645
+l1 = (z_alpha_div_2) * (sqrt((p_1)*(1-p_1)*(1/n)))
+print(p_1)
+print("+-")
+print(l1)
 
 print("Part B")
-pbar1 = 900/1000
-calc2 = (pbar1 * (1 - pbar1))/n
-calc3 = sqrt(calc2)
-zmultiplier = qnorm(0.975, mean = 0, sd = 1)
-l = calc3*zmultiplier
-print(l)
+k2 = 900
+p_2 = k2/n
+z_alpha_div_2_2 = 1.96
+l2 = (z_alpha_div_2_2) * (sqrt((p_2)*(1-p_2)*(1/n)))
+print(p_2)
+print("+-")
+print(l2)
 
 }
 
