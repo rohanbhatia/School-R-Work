@@ -90,3 +90,45 @@ print(pval)
 print("Debatable whether 0.107 should be rejected or accepted")
 
 }
+
+ch8q33 <- function() {
+
+print("Part A")
+print("H0: p <= 0.15 vs H1: p > 0.15")
+
+print("Part B")
+n = 40
+k = 9
+p = 0.15
+m = n*p
+s = sqrt(p*(1-p)*n)
+z = (k - m) / (s)
+z1 = pnorm(z, mean=0, sd=1)
+print(1-z1)
+
+}
+
+ch8q37 <- function() {
+
+print("Part A")
+print("H0: u <= 0.12 vs H1: u > 0.12")
+
+print("Part B")
+b = qt(0.99, df=29)
+print(b)
+
+print("Part C")
+n = 30
+sd = 0.03
+xbar = 0.135
+u = 0.12
+p = (xbar - u) / (sd / (sqrt(n)))
+print(p)
+pval = 1 - pt(p, df=29)
+print(pval)
+print("h0 is rejected as pval=0.005, which is less than 0.01 (alpha level)")
+
+print("Part D")
+print("assume X is normally distributed")
+
+}
