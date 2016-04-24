@@ -29,24 +29,19 @@ print(mean)
 print(var)
 
 print("Part C")
-s2 = sum((x - m1)^2)/length(x)
+s2 = sum((x - m1)^2)/(length(x)-1)
 print(s2)
 
 } 
 
 ch7q29 <-function() {
 
-	x = c(319, 338, 337, 339, 328, 325, 340, 331, 341, 336, 330, 330, 321, 327, 337, 320, 343, 350, 322, 334, 326, 349, 341, 338, 332, 339, 335, 338, 333, 334)
+x = c(319, 338, 337, 339, 328, 325, 340, 331, 341, 336, 330, 330, 321, 327, 337, 320, 343, 350, 322, 334, 326, 349, 341, 338, 332, 339, 335, 338, 333, 334)
 
-	print("Question 29: Using data from q27, what are the MLE estimates for mean and variance?")
-	print("Sample mean, pop variance of data")
-
-	u = sum(x) / length(x)
-
-	v = sum((x - u)^2) / length(x)
-
-	print(u)
-	print(v)
+u = sum(x) / length(x)
+v = sum((x - u)^2) / length(x)
+print(u)
+print(v)
 
 } 
 
