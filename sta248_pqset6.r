@@ -52,3 +52,41 @@ print("No, due to part c")
 print("Possible type 2 error since we are accepting H0 (possible that H1 is true and we are incorrect)")
 
 }
+
+ch8q29 <- function() {
+
+p1 = 1 - pbinom(p=0.4, q=13, size=20)
+p2 = 1 - pbinom(p=0.3, q=13, size=20)
+p3 = 1 - pbinom(p=0.2, q=13, size=20)
+p4 = 1 - pbinom(p=0.1, q=13, size=20)
+print("p = 0.4")
+print(p1)
+print("p = 0.3")
+print(p2)
+print("p = 0.2")
+print(p3)
+print("p = 0.1")
+print(p4)
+
+print("yes, less than 0.0577 as expected")
+
+
+ch8q31 <- function() {
+
+print("Part A")
+print("H0: u <= 0.05 vs H1: u > 0.05")
+
+print("Part B")
+print("Type 1 error: reject h0 when h0 is true - value of above 5% is assumed but this is incorrect")
+print("Type 2 error: fail to reject h0 when h1 is true - value of 5% or below is assumed but this is incorrect")
+
+print("Part C")
+n = 100
+xbar = 0.051
+sd = 0.008
+t = (xbar - 0.05) / (sd * (1/(sqrt(n))))
+pval = 1 - pt(t, n-1)
+print(pval)
+print("Debatable whether 0.107 should be rejected or accepted")
+
+}
