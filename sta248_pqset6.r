@@ -1,6 +1,6 @@
 
 
-ch8q17 <- function() {
+ch8q27 <- function() {
 
 print("Part A")
 print("H0: p <= 0.50 vs H1: p > 0.50")
