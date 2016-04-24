@@ -1,4 +1,4 @@
-
+#8.3-8.5: 21 23 27 29 31 33 37 39 41 45 9.2: 11 13 15
 
 ch8q27 <- function() {
 
@@ -169,5 +169,76 @@ print(t)
 pval = pt(t, df=n-1)
 print(pval)
 print("t = -2.828, pval = 0.003, so yes reject H0. Means that level for new coal is below 4.8")
+
+}
+
+ch9q11 <- function {
+
+print("Part A")
+print("H0: p <= 0.99 vs H1: p > 0.99")
+
+print("Part B")
+p_0 = 0.99
+n = 300
+k = 298
+p_hat = k/n
+z = (p_hat - p_0) / sqrt((p_0)*(1-p_0)*(1/n))
+print(z)
+tp = pnorm(z, mean=0, sd=1)
+p = 1 - tp
+print(p)
+print("z = 0.58, p = 0.281, so no cannot reject H0")
+
+print("Part C")
+print("cannot say that more than 99% compatible")
+
+
+}
+
+ch9q13 <- function {
+
+print("Part A")
+print("H0: p = 0.60 vs H1: p > 0.60")
+
+print("Part B")
+print("From z table, cp = 1.645 at 0.05 = alpha")
+
+print("Part C")
+p_0 = 0.60
+n = 375
+k = 233
+p_hat = k/n
+z = (p_hat - p_0) / sqrt((p_0)*(1-p_0)*(1/n))
+print(z)
+tp = pnorm(z, mean=0, sd=1)
+p = 1 - tp
+print(p)
+print("z = 0.843, pval = 0.200, therefore cannot reject H0. Subject to type 2 error.")
+
+print("Part D")
+print("Assuming that 60% or less of offices have mainframe comp when in fact it is greater than 60%")
+
+
+
+}
+
+ch9q15 <- function {
+
+print("Part A")
+print("CP = +- 1.96, since P( CP1 < Z < CP2) = 0.95 = 1 - 0.05 = 1 - alpha")
+
+print("Part B")
+p0 = 0.95
+n = 100
+k = 98
+phat = k/n
+z = (phat - p0) / sqrt((p0)*(1-p0)*(1/n))
+print(z)
+tp = pnorm(z, mean=0, sd=1)
+p = 1 - tp - pnorm(-1.96, mean=0, sd=1)
+print(p)
+print("z = 1.38, p = 0.06, so we cannot reject H0 at the alpha = 0.05 level. Subject to type 2 error")
+
+
 
 }
