@@ -132,3 +132,42 @@ print("Part D")
 print("assume X is normally distributed")
 
 }
+
+ch8q39 <- function() {
+
+print("Part A")
+print("H0: u >= 2.5 vs H1: u < 2.5")
+
+print("Part B")
+xbar = 1.8
+s = 0.8
+n = 16
+u = 2.5
+t = (xbar-u) / (s/(sqrt(n)))
+print(t)
+pval = pt(t, df=n-1)
+print(pval)
+print("Since pval = 0.002, reject H0, since strong evidence for H1. Assuming X is normally distributed")
+
+print("Part C")
+print("Noise level of these transistors is below 2.5. Reject H0 when it is true: real mean noise is 2.5db")
+
+}
+
+ch8q41 <- function {
+
+print("Part A")
+print("H0: u = 4.8 vs H1: u < 4.8")
+
+print("Part B")
+n = 200
+xbar = 4.7
+s = 0.5
+u = 4.8
+t = (xbar - u) / (s / (sqrt(n)))
+print(t)
+pval = pt(t, df=n-1)
+print(pval)
+print("t = -2.828, pval = 0.003, so yes reject H0. Means that level for new coal is below 4.8")
+
+}
